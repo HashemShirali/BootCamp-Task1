@@ -1,0 +1,349 @@
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: border-box;
+}
+/* colors */
+
+:root {
+  --color-body-section: #f7f7f7;
+  --color-white: #ffffff;
+  --color-selected-item: #2f0d0c;
+  --color-counter: #cc312d;
+  --color-orange-primary: #ed4545;
+  --color-orange-secondary: #e5303f1a;
+  --color-text-primary-aside: #130505;
+  --color-text-secondary-aside: #ffffff;
+  --color-text-gray: #eae7e7;
+  --color-blue-primary: #2e7af1;
+  --color-blue-secondary: #448cf91a;
+  --color-green-primary: #0caf3a;
+  --color-green-secondary: #1bac441a;
+  --color-gray: #1717171a;
+  --color-text-secondary: #606060;
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  /* background-color: red; */
+  /* height: 200px; */
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px;
+  border-radius: 20px;
+}
+aside {
+  background-color: var(--color-body-section);
+  border-radius: 20px;
+}
+.header__profile-icon {
+  background-color: var(--color-white);
+  display: inline-block;
+  padding: 14px;
+  border-radius: 12px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* margin: 24px 19px; */
+  border-bottom: 1.5px solid #e6e6e6;
+  padding: 24px 19px;
+  width: 100%;
+}
+.header__information {
+  flex-grow: 1;
+}
+.profile__name {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.profile__phone {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+}
+.options {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding:  12px;
+}
+li {
+  font-size: 1.4rem;
+}
+svg{
+  vertical-align: middle;
+}
+
+.title__text {
+  font-size: 1.6rem;
+  text-align: center;
+  align-self: center;
+  flex-grow: 1;
+}
+.title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 44px;
+}
+
+.badge-item {
+  display: inline-block;
+
+  margin-right: 16px;
+}
+.account-status {
+  width: 95vw;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 20px 16px;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  width: 222px;
+  height: 84px;
+  border-radius: 16px;
+  padding: 24px 15px;
+  border: 1.5px solid #ebebeb;
+}
+section {
+  margin-bottom: 20px;
+}
+.badge__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 14.5px;
+  border-radius: 10px;
+}
+.badge--blue {
+  background-color: var(--color-blue-secondary);
+}
+.badge--green {
+  background-color: var(--color-green-secondary);
+}
+.badge--gray {
+  background-color: var(--color-gray);
+}
+.badge--orange {
+  background-color: var(--color-orange-secondary);
+}
+.partition {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.badge__counter {
+  font-size: 1.6rem;
+}
+.badge__counter::after {
+  content: " سفارش ";
+}
+.messages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-orange-primary);
+  text-align: center;
+  border-radius: 24px;
+  color: white;
+}
+.list__text{
+  flex-grow: 1;
+}
+.badge__title{
+  color:var(--color-text-secondary) ;
+}
+.orders {
+  font-size: 1.6rem;
+}
+.order__icon {
+  color: var(--color-blue-primary);
+}
+.badge--item {
+  width: 144px;
+  height: 44px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  border: none;
+}
+.options:hover {
+    background-color: var(--color-selected-item);
+    color: white;
+    border-radius: 44px;
+    transition: all 0.3s linear;
+    svg path {
+      transition: all 0.3s linear;
+      fill: white;
+    }
+  }
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.order__delivery-date::before {
+  content: "تاریخ تحویل سفارش : ";
+  color: var(--color-text-secondary);
+}
+.order__code::before {
+  content: " کد سفارش : ";
+  color: var(--color-text-secondary);
+}
+.order__price {
+  align-self: flex-end;
+  font-size: 2.4rem;
+}
+.order__price::after {
+  content: " تومان  ";
+  color: var(--color-text-secondary);
+  font-size: small;
+}
+img {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  background-color: var(--color-white);
+  padding: 10px;
+}
+.order__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-body-section);
+  border-radius: 16px;
+  padding: 10px;
+}
+.items {
+  /* padding: 16px; */
+  margin-left: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.order-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.badge--hover:hover{
+  border: 1px solid var(--color-orange-primary) ;
+  transition: all 0.3s linear;
+
+}
+.orders {
+  border: 1px solid rgba(0, 0, 0, 0.148);
+  border-radius: 16px;
+  padding: 20px;
+}
+.items__image {
+  margin-left: -20px;
+  border-radius: 12px;
+  border: 3px solid var(--color-body-section);
+}
+.order__items-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-orange-primary);
+}
+.item__number {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1440px;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  .title {
+    display: none;
+  }
+  .options {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  aside {
+    max-height: 520px;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .order-content {
+    display: flex;
+  }
+  .badge__title {
+    font-size: 1.4rem;
+  }
+  .badge__counter {
+    font-size: 1.6rem;
+  }
+
+  .account-status {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .order-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4rem;
+    border-bottom: 1px solid var(--color-body-section);
+    padding: 2rem;
+    margin: 0px 1rem;
+  }
+  .order__code {
+    flex-grow: 1;
+  }
+  .items__image {
+    margin: 0rem 2rem;
+  }
+  .item__pic {
+    position: relative;
+  }
+  .item__number {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 18px;
+    background-color: var(--color-gray);
+    text-align: center;
+    border: 0.75px solid var(--color-text-primary-aside);
+  }
+  .options:hover {
+    background-color: var(--color-selected-item);
+    color: white;
+    border-radius: 44px;
+    transition: all 0.2s ease-in;
+    svg path {
+      fill: white;
+    }
+  }
+}
+@media screen and (min-width: 768) {
+  .account-status {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

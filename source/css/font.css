@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'vazir';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/task1/assets/fonts/Vazir-Medium-FD-WOL.woff');
+}
+@font-face {
+    font-family: 'vazir';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/task1/assets/fonts/Vazir-Medium-FD-WOL.woff');
+}
+
+body{
+    font-family: 'vazir';
+}
